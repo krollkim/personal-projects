@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js" defer></script>
+    <title>calculator</title>
+</head>
+<body>
+    <div class="frame">
+        <header>
+            <h1>calculator</h1>
+        </header>
+
+        <div class="card">
+
+            <div id="calculator">
+            
+                <table class="calculator__keys" >
+                    <div id="calculator__display"></div>
+                    <thead>
+                        
+                        <tr>
+                            <th>
+                            <button onclick="key('+')">
+                                +
+                            </button>
+                            </th>
+                            <th>
+                                <button onclick="key('-')">
+                                -
+                            </button>
+                            </th>
+                            <th>
+                                <button onclick="key('*')">
+                                *
+                                </button>
+                            </th>
+                            <th>
+                                <button onclick="key('/')">
+                                /
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                            <td> <button onclick="key(1)">1</button></td>
+                            <td> <button onclick="key(2)">2</button></td>
+                            <td> <button onclick="key(3)">3</button></td>
+                            <td> <button onclick="calc()">=</button></td>
+                        </tr>
+                        <tr>
+                            <td> <button onclick="key(4)">4</button></td>
+                            <td> <button onclick="key(5)">5</button></td>
+                            <td> <button onclick="key(6)">6</button></td>
+                            <td> <button onclick="clean()">c</button></td>
+                        </tr>
+                        <tr>
+                            <td> <button onclick="key(7)">7</button></td>
+                            <td> <button onclick="key(8)">8</button></td>
+                            <td> <button onclick="key(9)">9</button></td>
+                            <td> <button onclick="key(0)">0</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
