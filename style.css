@@ -73,7 +73,7 @@ p {
 
 /*hero section*/
 #hero {
-  background-image: url(img/ascent-kaws-report-2019-00.png);
+  background-image: url(ascent-kaws-report-2019-00.png);
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -147,7 +147,7 @@ p {
 }
 #services .service-top{
   width: 500px;
-  max-margin: 0 auto;
+  
 }
 #services .service-buttom {
   display: flex;
