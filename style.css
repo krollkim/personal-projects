@@ -10,6 +10,13 @@ html {
   font-family: "montserrat", sans-serif;
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
 a {
   text-decoration: none;
 }
@@ -19,6 +26,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden
 }
 img {
   height: 100%;
@@ -45,7 +53,9 @@ p {
 .section-title span {
   color: crimson;
 }
-
+#contact h1.section-title {
+    padding-bottom: 30px;
+}
 .cta {
   display: inline-block;
   padding: 10px 30px;
@@ -73,13 +83,18 @@ p {
 }
 
 /* header */
-#header{
+#header {
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: auto;
+}
+#header .header container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
 }
 #header .header{
   min-height: 8vh;
@@ -92,7 +107,7 @@ p {
   align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 1300px;
+  max-width: 1600px;
   padding: 0 10px;
 }
 #header .nav-list ul{
@@ -155,7 +170,7 @@ p {
   z-index: 100;
   cursor: pointer;
   transform: scale(.8);
-  margin-right: 20px;
+  margin: 5px;
 }
 #header .hamburger::after{
   position: absolute;
@@ -276,6 +291,15 @@ p {
 #services .service-top{
   width: 500px;
   max-width: 0 auto;
+  padding: 0 20px;
+}
+#services .service-top p {
+  color: black;
+  text-align: center;
+  word-wrap: break-word;
+  margin: 10px auto;
+  max-width: 90%;
+  padding: 0 30px;
 }
 #services .service-buttom {
   display: flex;
@@ -288,7 +312,7 @@ p {
   flex-basis: 80%;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   padding: 30px;
   width: 360px;
@@ -299,6 +323,7 @@ p {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  min-height: 400px;
 }
 #services .service-item::after {
   content: "";
@@ -460,22 +485,25 @@ z-index: -1;
   max-width: 1200px;
   margin: 0 auto;
 }
-#contact .contact-items{
-  width: 400px;
+#contact .contact-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 #contact .contact-item{
-  width: 80%;
+  flex: 1 1 300px;
+  max-width: 350px;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-  padding: 30px;
-  margin: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.411);
   transition: .3s ease box-shadow;
+}
+#contact .contact-item:last-child {
+  margin-bottom: 24px;
 }
 #contact .contact-item:hover{
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.411);
@@ -490,7 +518,7 @@ font-size: 2.5rem;
 font-weight: 500;
 margin-bottom: 5px;
 }
-#vontact .contact-info h2{
+#contact .contact-info h2{
   font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 500;
@@ -575,7 +603,6 @@ margin-bottom: 5px;
   h1.section-title{
     font-size: 6rem;
   }
-
   /*Hero*/
   #hero h1{
     font-size: 7rem;
@@ -586,6 +613,25 @@ margin-bottom: 5px;
   #services .service-buttom .service-item{
   flex-basis: 45%;
   margin: 2.5%;
+  }
+  #services .service-top p {
+    padding: 0;
+  }
+  #services .service-buttom {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap into multiple rows */
+    justify-content: center; /* Center-align cards horizontally */
+    align-items: stretch; /* Ensures all cards have equal height */
+    gap: 20px; /* Adds spacing between cards */
+    margin: 0 auto;
+    max-width: 1200px; /* Keeps cards aligned neatly */
+  }
+  #services .service-item {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
   }
   /*End Service Section*/
 
@@ -672,7 +718,7 @@ margin-bottom: 5px;
 /*End Media Query For Tablet*/
 
 /*Media Query For Desktop*/
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1400px){
 
   /* header */
   #header .hamburger{
@@ -701,6 +747,9 @@ margin-bottom: 5px;
     flex-basis: 22%;
     margin: 1.5%;
     
+  }
+  #services .service-buttom {
+   flex-wrap: nowrap;
   }
 }
 
