@@ -410,6 +410,10 @@ p {
   height: 300px;
   overflow: hidden;
   position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: crimson;
+  
 }
 #projects .project-img::after {
   content: "";
@@ -418,11 +422,14 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
   opacity: 0.4;
 }
 #projects .project-img img {
   transition: 0.3s ease transform;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
